@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massage Treatments | High Tide Beauty Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    /* --- GLOBAL & BACKGROUND --- */
+    :root {
+        --accent-gold: #d4af37;
+        --accent-coral: #ff7f50;
+        --white: #ffffff;
+        --text-muted: #cccccc;
+    }
+
+    body.services-page {
+        margin: 0;
+        padding: 0;
+        /* New Nail-themed background image */
+       
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                    url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Keeps image still while scrolling */
+        font-family: 'Montserrat', sans-serif;
+        color: var(--white);
+    }
+
+    /* --- NAILS MENU STYLES --- */
+
+    .service-hero {
+        height: 40vh;
+        background: transparent; /* Made transparent */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .treatment-menu {
+        padding: 80px 0;
+        background: transparent; /* Made transparent */
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .menu-item {
+        /* Glass effect for readability */
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(5px);
+        padding: 30px;
+        border-radius: 10px;
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+        transition: 0.3s;
+    }
+
+    .menu-item:hover {
+        border-color: var(--accent-gold);
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 10px;
+    }
+
+    .menu-header h3 {
+        font-size: 1.6rem;
+        color: var(--white);
+        letter-spacing: 1px;
+        margin: 0;
+    }
+
+    .price {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.4rem;
+        color: var(--accent-gold);
+        font-weight: bold;
+    }
+
+    .menu-item p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .text-link {
+        color: var(--accent-gold);
+        text-decoration: none;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: 0.3s;
+    }
+
+    .text-link:hover {
+        color: var(--accent-coral);
+        padding-left: 5px;
+    }
+
+    footer {
+        background: rgba(0,0,0,0.8);
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    /* Mobile Tweak */
+    @media (max-width: 600px) {
+        .menu-grid { grid-template-columns: 1fr; }
+        .menu-header { flex-direction: column; }
+        .price { margin-top: 5px; }
+    }
+</style>
+<body class="services-page">
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html"><img src="img/WhatsApp Image 2026-02-05 at 16.53.39.jpeg" alt="High Tide Logo" class="nav-logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="btn-book">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="service-hero">
+        <div class="hero-content">
+            <h1>Nail Artistry</h1>
+            <p>A sanctuary for deep relaxation and physical restoration.</p>
+        </div>
+    </header>
+
+    <!-- Treatment Menu -->
+    <section class="treatment-menu">
+        <div class="container">
+            <div class="menu-grid">
+                
+           <!-- Service 1 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Soak Off</h3>
+                        <span class="price">R50</span>
+                    </div>
+                    <p>A gentle, non-damaging removal of existing product to keep your natural nails healthy and ready for their next look.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Gel Overlays + Soak off</h3>
+                        <span class="price">R270</span>
+                    </div>
+                    <p>The ultimate refresh—combining professional removal of your old set with a fresh, high-shine gel finish.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Gel Overlays</h3>
+                        <span class="price">R220</span>
+                    </div>
+                    <p>Strengthen and enhance your natural nails with a durable, chip-resistant layer of premium gel polish.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Hands & Toes Gel Overlays</h3>
+                        <span class="price">R350</span>
+                    </div>
+                    <p>A perfectly coordinated duo offering long-lasting color and a polished finish for both your hands and feet.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Toes Overlays</h3>
+                        <span class="price">R175</span>
+                    </div>
+                    <p>Keep your toes looking flawless and vibrant with a sleek, glossy gel coating that lasts for weeks.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Nail Fix (per nail)</h3>
+                        <span class="price">R30</span>
+                    </div>
+                   <p>A seamless restoration for a single chipped or broken nail to match the rest of your set perfectly.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Nail Art Basic (per nail) </h3>
+                        <span class="price">R10</span>
+                    </div>
+                    <p>Add a subtle, elegant touch with minimalist accents like simple lines, dots, or clean geometric shapes.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Nail Art Deluxe</h3>
+                        <span class="price">Determined by Set</span>
+                    </div>
+                    <p>Express your style with bespoke, intricate designs and hand-painted artistry for a truly unique look.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Tips (per nail)</h3>
+                        <span class="price">R20</span>
+                    </div>
+                    <p>Add customized length and shape to an individual nail for a balanced and uniform appearance.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 10 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Gents Pedicure</h3>
+                        <span class="price">R180</span>
+                    </div>
+                    <p>Professional foot grooming including nail shaping, cuticle care, and smoothing for a clean, refreshed feel.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 11 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Gents Manicure</h3>
+                        <span class="price">R130</span>
+                    </div>
+                    <p>Essential hand maintenance focusing on tidy cuticles and neatly shaped nails for a professional look.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 12 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Gents Manicure + Pedicure</h3>
+                        <span class="price">R250</span>
+                    </div>
+                    <p>The total grooming package for the modern man, ensuring both hands and feet are meticulously cared for.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Service 13 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Ladies Foot Spa (Scrub & Buff)</h3>
+                        <span class="price">R180</span>
+                    </div>
+                    <p>Revitalize tired feet with a smoothing exfoliation and buffing treatment for incredibly soft and radiant skin.</p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 High Tide Beauty Studio | All Rights Reserved</p>
+        </div>
+        <div class="social-links">
+        <a href="https://www.instagram.com/high.tide.beauty.studio/" title="Instagram" style="color: #E4405F;"><i class="fab fa-instagram"></i></a>
+        <a href="https://m.facebook.com/profile.php?id=61588398155224&name=xhp_nt__fb__action__open_user" title="Facebook" style="color: #1877F2;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/27605421408" target="_blank" title="WhatsApp" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@high.tide.beauty.studio" title="TikTok" style="color: #ff3f3f;"><i class="fab fa-tiktok"></i></a>
+    </div>
+    </footer>
+
+</body>
+</html>

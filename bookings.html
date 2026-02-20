@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | High Tide Beauty Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+/* --- ENHANCED BOOKING PAGE STYLES --- */
+
+/* Background for the whole page */
+.booking-page {
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+    min-height: 100vh;
+}
+
+.booking-container {
+    max-width: 850px;
+    margin: 120px auto 80px;
+    padding: 0 20px;
+}
+
+/* Glassmorphism Card Effect */
+.booking-form {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--accent-gold); /* Gold "Crown" Border */
+    padding: 4rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Typography Enhancements */
+.booking-header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    background: linear-gradient(to bottom, #f39c12, #e67e22);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.booking-header p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* Input Styling */
+.form-group label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* The "Glow" Focus Effect */
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-coral);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Service select dropdown styling */
+select option {
+    background: #111;
+    color: #fff;
+}
+
+/* Customizing the Date picker (Chrome/Safari) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Makes the calendar icon white */
+    cursor: pointer;
+}
+
+/* The Button - Gold Shimmer Effect */
+.btn-block {
+    background: linear-gradient(45deg, #d35400, #ff7f50);
+    border: none;
+    padding: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.btn-block:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 127, 80, 0.4);
+}
+
+/* Animation for the form loading */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Success Message Upgrade */
+.success-message {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--accent-gold);
+    padding: 4rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.success-message i {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, #ff7f50, #d35400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+</style>
+<body class="booking-page">
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html"><img src="img/WhatsApp Image 2026-02-05 at 16.53.39.jpeg" alt="High Tide Logo" class="nav-logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="bookings.html" class="btn-book">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Booking Content -->
+    <main class="booking-container">
+        <div class="booking-header">
+            <img src="img/WhatsApp Image 2026-02-05 at 16.53.39.jpeg" alt="Logo" class="form-logo" style="width: 60px; height: 60px;">
+            <h1>Bookings</h1>
+            <p>Please fill out the details below to request your appointment.</p>
+        </div>
+
+        <form id="booking-form" class="booking-form">
+            <div class="form-grid">
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="E.g. Jane Doe" required>
+    </div>
+    <div class="form-group">
+        <label>Treatment Selection</label>
+        <select id="service" required>
+            <option value="" disabled selected>Select a Service</option>
+            <option value="gel">Structure Gel Manicure</option>
+            <option value="pedi">Luxury Spa Pedicure</option>
+            <option value="massage">Massage Therapy</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Preferred Date</label>
+        <input type="date" id="date" required>
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="(555) 000-0000" required>
+    </div>
+</div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Additional Notes</label>
+                <textarea id="notes" rows="4" placeholder="Any specific requests or nail art designs?"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-block">Confirm Booking Request</button>
+        </form>
+
+        <div id="success-msg" class="success-message" style="display:none;">
+            <i class="fas fa-calendar-check"></i>
+            <h2>Booking Request Received</h2>
+            <p>Thank you! We will check our availability and contact you shortly to finalize your appointment.</p>
+            <a href="index.html" class="btn-secondary" style="margin-top:20px; display:inline-block;">Return Home</a>
+        </div>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 High Tide Beauty Studio | <a href="index.html" style="color:var(--accent-gold); text-decoration:none;">Back to Home</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Existing Navbar Scroll Logic
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.background = '#000000';
+        } else {
+            navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+        }
+    }
+});
+
+// Booking Form Logic
+const bookingForm = document.getElementById('booking-form');
+if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Hide form and header, show success
+        document.querySelector('.booking-header').style.display = 'none';
+        bookingForm.style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+    });
+}
+    </script>
+</body>
+</html>

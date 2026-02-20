@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massage Treatments | High Tide Beauty Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+ /* --- GLOBAL STYLES --- */
+:root {
+    --accent-gold: #d4af37;
+    --accent-coral: #ff7f50;
+    --white: #ffffff;
+    --text-muted: #cccccc;
+}
+
+body.services-page {
+    margin: 0;
+    padding: 0;
+    /* Move the background image here so it covers the entire page */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                url(img/evie-s-bSVGnUCk4tk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This keeps the image still while you scroll */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- MASSAGE MENU STYLES --- */
+
+.service-hero {
+    height: 40vh;
+    background: transparent; /* Removed the local background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    color: white;
+}
+
+.treatment-menu {
+    padding: 80px 0;
+    background-color: transparent; /* Made this transparent */
+}
+
+/* Optional: Add a subtle "Glass" effect to the menu items for better readability */
+.menu-item {
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+    backdrop-filter: blur(5px); /* Blurs the background behind the item slightly */
+}
+
+.menu-item:hover {
+    border-color: var(--accent-gold);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.menu-header h3 {
+    font-size: 1.8rem;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.duration {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent-coral);
+    margin-bottom: 15px;
+}
+
+.menu-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.text-link {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: var(--accent-coral);
+    padding-left: 5px;
+}
+
+footer {
+    background: rgba(0,0,0,0.5); /* Semi-transparent footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mobile Tweak */
+@media (max-width: 600px) {
+    .menu-grid { grid-template-columns: 1fr; }
+    .menu-header { flex-direction: column; }
+    .price { margin-top: 5px; }
+}
+</style>
+<body class="services-page">
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html"><img src="img/WhatsApp Image 2026-02-05 at 16.53.39.jpeg" alt="High Tide Logo" class="nav-logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="btn-book">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="service-hero">
+        <div class="hero-content">
+            <h1>EXTRAS</h1>
+            <p>A sanctuary for deep relaxation and physical restoration.</p>
+        </div>
+    </header>
+
+    <!-- Treatment Menu -->
+    <section class="treatment-menu">
+        <div class="container">
+            <div class="menu-grid">
+
+                
+                <!-- Massage Treatments Section Heading -->
+                                <div style="grid-column: 1 / -1; text-align: center; margin-top: 40px;">
+                                    <h2 style="font-size: 2rem; color: var(--white); letter-spacing: 1px; margin-bottom: 10px;">Radience Spa-rty</h2>
+                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Experience the warmth and healing benefits</p>
+                                </div>
+                <!-- Service 1 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Variety (From 10Yrs - 17Yrs)</h3>
+                        <span class="price">R320</span>
+                    </div>
+                    <span class="duration">1 HOUR 15 MIN</span>
+                    <p>> Mini Cucumber Facial <br>
+                       > Foot Soak & Scrub incl. Foot Massage <br>
+                       > Pamper my Nails Treatment (Nail File, Cuticle Work and Paint) incl. a Mocktail <br>                   
+                    </p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                <!-- Massage Treatments Section Heading -->
+                                <div style="grid-column: 1 / -1; text-align: center; margin-top: 40px;">
+                                    <h2 style="font-size: 2rem; color: var(--white); letter-spacing: 1px; margin-bottom: 10px;">Mummy & Me</h2>
+                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Experience the warmth and healing benefits</p>
+                                </div>
+                <!-- Service 1 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Variety</h3>
+                        <span class="price">R550</span>
+                    </div>
+                    <span class="duration">1 HOUR 30 MIN</span>
+                    <p>> Full Body Massage <br>
+                       > Foot Massage <br>
+                       > Mini Cucumber Facial <br>
+                       > incl. A Mocktail <br>      
+                    </p>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+                 <!-- Massage Treatments Section Heading -->
+                                <div style="grid-column: 1 / -1; text-align: center; margin-top: 40px;">
+                                    <h2 style="font-size: 2rem; color: var(--white); letter-spacing: 1px; margin-bottom: 10px;">Corporate</h2>
+                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Experience the warmth and healing benefits</p>
+                                </div>
+
+                <!-- Service 2 -->
+                <div class="menu-item">
+                    <div class="menu-header">
+                        <h3>Variety </h3>
+                        <span class="price">Price Varies (POA)</span>
+                    </div>
+                    <span class="duration">Time Varies</span>
+                    <a href="contact.html" class="text-link">Book this treatment →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 High Tide Beauty Studio | All Rights Reserved</p>
+        </div>
+        <div class="social-links">
+        <a href="https://www.instagram.com/high.tide.beauty.studio/" title="Instagram" style="color: #E4405F;"><i class="fab fa-instagram"></i></a>
+        <a href="https://m.facebook.com/profile.php?id=61588398155224&name=xhp_nt__fb__action__open_user" title="Facebook" style="color: #1877F2;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/27605421408" target="_blank" title="WhatsApp" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@high.tide.beauty.studio" title="TikTok" style="color: #ff3f3f;"><i class="fab fa-tiktok"></i></a>
+    </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #0a0a0a;
+    --accent-coral: #ff7f50; /* Inspired by the logo coral */
+    --accent-gold: #f39c12;  /* Inspired by the logo shells */
+    --text-light: #f4f4f4;
+    --text-muted: #a0a0a0;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+#navbar {
+    background: rgba(0, 0, 0, 0.95);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    height: 70px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--accent-coral);
+}
+
+.btn-book {
+    background: var(--accent-coral);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Spa background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.hero-logo {
+    max-width: 300px;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--accent-coral);
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid var(--white);
+    color: white;
+}
+
+.btn-primary:hover { background: #e66d43; }
+.btn-secondary:hover { background: white; color: black; }
+
+/* Services Section */
+.services {
+    padding: 5rem 0;
+    background: #111;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--accent-gold);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #1a1a1a;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-coral);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--accent-coral);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.service-list {
+    list-style: none;
+    margin-top: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 0;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-gold);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 400px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-style: italic;
+    color: var(--text-muted);
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 5rem 0 2rem 0;
+    border-top: 1px solid #222;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+}
+
+.footer-logo {
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.footer-grid h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+}
+
+.footer-grid p {
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+.footer-grid i {
+    margin-right: 10px;
+    color: var(--accent-coral);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #111;
+    font-size: 0.8rem;
+    color: #444;
+}
+
+/* Styling for interactive contact links */
+.contact-link {
+    color: var(--text-muted); /* Keeps it the same grey as the rest of the text */
+    text-decoration: none;    /* Removes the default underline */
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--accent-coral); /* Turns coral when hovered/tapped */
+    text-decoration: underline; /* Optional: adds underline only on hover */
+}
+
+/* Ensure the icons stay coral even if the link is grey */
+.footer-links i {
+    color: var(--accent-coral);
+    margin-right: 10px;
+}
+
+.social-links {
+    display: flexbox;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.2rem; }
+    .about-flex { flex-direction: column; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

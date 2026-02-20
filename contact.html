@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | High Tide Beauty Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- GLOBAL & BACKGROUND --- */
+        :root {
+            --accent-gold: #f39c12;
+            --accent-coral: #ff7f50;
+            --white: #ffffff;
+            --text-muted: #cccccc;
+            --glass: rgba(0, 0, 0, 0.85);
+        }
+
+        body.contact-page {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=cro');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--white);
+            min-height: 100vh;
+        }
+
+        /* --- NAVIGATION --- */
+        #navbar {
+            background: rgba(0, 0, 0, 0.9);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .nav-logo { height: 50px; border-radius: 5px; }
+
+        .nav-links { list-style: none; display: flex; align-items: center; }
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-links li a.active { color: var(--accent-gold); }
+
+        .btn-book {
+            background: var(--accent-coral);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* --- HERO --- */
+        .contact-hero {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 10px;
+            color: var(--accent-gold);
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-section {
+            padding: 20px 20px 100px;
+        }
+
+        .contact-container {
+            max-width: 600px; /* Centered single column */
+            margin: 0 auto;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            padding: 60px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 35px;
+            text-decoration: none; /* For links */
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        /* Hover effect for clickable items */
+        a.info-item:hover {
+            transform: translateX(10px);
+        }
+        
+        a.info-item:hover h4 { color: var(--accent-coral); }
+
+        .info-item i {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-right: 25px;
+            margin-top: 5px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .info-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin: 0 0 5px 0;
+            color: var(--accent-gold);
+            transition: 0.3s;
+        }
+
+        .info-item p {
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .social-links {
+            margin-top: 50px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+            transform: scale(1.2);
+            display: inline-block;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: rgba(0,0,0,0.9);
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            .contact-container { padding: 40px 25px; }
+            .info-item i { margin-right: 15px; font-size: 1.2rem; }
+            .info-item h4 { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+
+<body class="contact-page">
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html"><img src="img/WhatsApp Image 2026-02-05 at 16.53.39.jpeg" alt="High Tide Logo" class="nav-logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="massage.html">Massage</a></li>
+                <li><a href="nails.html">Nails</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="contact-hero">
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>Your seaside retreat is just a click away.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            
+            <!-- Clickable Location -->
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Beach+Bums+65+Casuarina+Rd+Genazzano+4399" target="_blank" class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Location</h4>
+                     <p>Beach Bums, <br> 65 Casuarina Rd, <br> Genazzano, 4399</p>
+                </div>
+            </a>
+
+            <!-- Clickable Phone -->
+            <a href="tel:0605421408" class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4>Call Us</h4>
+                    <p>(060) 542-1408</p>
+                </div>
+            </a>
+
+            <!-- Clickable Email -->
+            <a href="mailto:hightidebeautystudio@gmail.com" class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>hightidebeautystudio@gmail.com</p>
+                </div>
+            </a>
+
+            <!-- Static Hours -->
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h4>Hours</h4>
+                    <p>Sun - Tue: 8am - 8pm</p>
+                    <p>Wed - Thu: 8am - 9pm</p>
+                    <p>Fri - Sat: 8am - 11pm</p>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/high.tide.beauty.studio/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://m.facebook.com/profile.php?id=61588398155224&name=xhp_nt__fb__action__open_user" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/27605421408" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@high.tide.beauty.studio" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 High Tide Beauty Studio | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
