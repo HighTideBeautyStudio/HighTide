@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Specials | High Tide Beauty Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+/* --- GLOBAL STYLES --- */
+:root {
+    --accent-gold: #d4af37;
+    --accent-coral: #ff7f50;
+    --white: #ffffff;
+    --text-muted: #cccccc;
+}
+
+body.specials-page {
+    margin: 0;
+    padding: 0;
+    /* Background: A soft, elegant spa-like image */
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- MENU STYLES --- */
+.service-hero {
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    color: white;
+}
+
+.service-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.treatment-menu {
+    padding: 60px 0 100px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.03); 
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item:hover {
+    border-color: var(--accent-gold);
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-5px);
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: black;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-header h3 {
+    font-size: 1.6rem;
+    color: var(--white);
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--accent-gold);
+}
+
+.duration {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent-coral);
+    margin: 10px 0 20px;
+    font-weight: 600;
+}
+
+.menu-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: var(--accent-coral);
+    padding-left: 10px;
+}
+
+footer {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
+.social-links a { font-size: 1.2rem; transition: 0.3s; }
+.social-links a:hover { opacity: 0.7; }
+
+/* Mobile Tweak */
+@media (max-width: 600px) {
+    .menu-grid { grid-template-columns: 1fr; }
+    .service-hero h1 { font-size: 2.5rem; }
+}
+</style>
+
+<body class="specials-page">
+
+    <!-- Navigation (Keep your same nav here) -->
+    <nav id="navbar">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;">
+             <a href="index.html"><img src="img/WhatsApp Image 2026-02-05 at 16.53.39.jpeg" alt="High Tide Logo" style="height: 60px;"></a>
+            <ul class="nav-links" style="list-style: none; display: flex; gap: 20px;">
+                <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                <li><a href="contact.html" style="color: var(--accent-gold); text-decoration: none; font-weight: bold;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="service-hero">
+        <div class="hero-content">
+            <span style="color: var(--accent-gold); letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem;">Limited Time Offers</span>
+            <h1>EXCLUSIVE SPECIALS</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Carefully curated packages designed to provide the ultimate balance of beauty and relaxation.</p>
+        </div>
+    </header>
+
+    <!-- Treatment Menu -->
+    <section class="treatment-menu">
+        <div class="container">
+            <div class="menu-grid">
+
+                <!-- Special 1 -->
+                <div class="menu-item">
+                    <div>
+                        <span class="badge">27/02 till 04/03</span>
+                        <div class="menu-header">
+                            <h3>Opening Special</h3>
+                            <h2>Full Body Massage</h2>
+                            <span class="price" style="text-decoration: line-through;">R300</span>   <span class="price">R210</span> 
+                        </div>
+                        <span class="duration">1 HOUR</span>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <a href="contact.html" class="text-link">Claim this offer →</a>
+                </div>
+
+                 <!-- Special 1 -->
+                <div class="menu-item">
+                    <div>
+                        <span class="badge">27/02 till 04/03</span>
+                        <div class="menu-header">
+                            <h3>Opening Special</h3>
+                            <h2>Full Body Couple Massage</h2>
+                            <span class="price" style="text-decoration: line-through;">R500</span>   <span class="price">R400</span> 
+                        </div>
+                        <span class="duration">1 HOUR</span>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <a href="contact.html" class="text-link">Claim this offer →</a>
+                </div>
+
+                <!-- Special 1 -->
+                <div class="menu-item">
+                    <div>
+                        <span class="badge">27/02 till 04/03</span>
+                        <div class="menu-header">
+                            <h3>Opening Special</h3>
+                            <h2>Gel Overlays + 1 Nail Art</h2>
+                            <span class="price" style="text-decoration: line-through;">R230</span>   <span class="price">R150</span>
+                        </div>
+                        <span class="duration">1 HOUR</span>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <a href="contact.html" class="text-link">Claim this offer →</a>
+                </div>
+
+                 <!-- Special 1 -->
+                <div class="menu-item">
+                    <div>
+                        <span class="badge">27/02 till 04/03</span>
+                        <div class="menu-header">
+                            <h3>Opening Special</h3>
+                            <h2>Gel Toes Overlays</h2>
+                            <span class="price" style="text-decoration: line-through;">R175</span>   <span class="price">R120</span>
+                        </div>
+                        <span class="duration">1 HOUR</span>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <a href="contact.html" class="text-link">Claim this offer →</a>
+                </div>
+
+                 <!-- Special 1 -->
+                <div class="menu-item">
+                    <div>
+                        <span class="badge">28/02 till 01/03</span>
+                        <div class="menu-header">
+                            <h3>FRENZY</h3>
+                            <h2>Neck, Shoulder and Foot Massage</h2>
+                            <span class="price" style="text-decoration: line-through;">R230</span>   <span class="price">R150</span>
+                        </div>
+                        <span class="duration">50 MINS</span>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <a href="contact.html" class="text-link">Claim this offer →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+   <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 High Tide Beauty Studio | All Rights Reserved</p>
+        </div>
+        <div class="social-links">
+        <a href="https://www.instagram.com/high.tide.beauty.studio/" title="Instagram" style="color: #E4405F;"><i class="fab fa-instagram"></i></a>
+        <a href="https://m.facebook.com/profile.php?id=61588398155224&name=xhp_nt__fb__action__open_user" title="Facebook" style="color: #1877F2;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/27605421408" target="_blank" title="WhatsApp" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@high.tide.beauty.studio" title="TikTok" style="color: #ff3f3f;"><i class="fab fa-tiktok"></i></a>
+    </div>
+    </footer>
+
+</body>
+</html>
